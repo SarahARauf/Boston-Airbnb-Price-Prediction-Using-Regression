@@ -8,7 +8,8 @@ Airbnb has revolutionized the way people travel by providing a platform where ho
 
 The challenge of predicting Airbnb listing prices lies in the multitude of factors influencing the price point. Geographic location, property type, amenities offered, and many other variables all play a crucial role in determining how much a property should cost. This variability creates difficulty for hosts in identifying the optimal price for their listings. Understanding the dynamics behind these factors can aid in reducing pricing errors and improve the booking rate and revenue for hosts.
 
-​## Objectives
+​##Objectives
+
 - Build a regression model to predict the price of Airbnb listings.​
 - Identify significant features that impact the price of a listing.​
 - Achieve a high level of accuracy in predicting listing prices to minimize underpricing or overpricing errors.​
