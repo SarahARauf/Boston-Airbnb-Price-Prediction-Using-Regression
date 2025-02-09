@@ -27,8 +27,44 @@ The dataset used for this project was taken from the Boston Airbnb Open Data dat
 
 ## Methodology
 1. Data Cleaning and Preparation
-3. Exploratory Data Analysis (EDA): Normal distribution charts on numeric continuous variables,  
-4. Model Development (e.g., Linear Regression, Random Forest, Neural Networks)
-5. Model Evaluation (e.g., Accuracy, F1 Score)
+3. Exploratory Data Analysis (EDA): Numerical distribution charts, class distribution charts, correlation analysis using boxplots, pearson's correlataion, point-biserial and kruskal-willis
+4. Model Development: Multiple Linear Regression, Decision Tree Regression, Random Forest Regression, Support Vector Regression, Gradient Boosting Machine Regression, XGBoost Regression, Voting Regression Model, Neural Networks
+5. Hyperparameter tuning: Grid Search CV
+6. Model Evaluation (e.g. RMSE Learning curve, MAE, MSE, R²)
+
+## Results
+
+### Correlation Analysis
+1. **Pearson’s Correlation (Numerical Variables)**:
+   - **Strong Correlations**: Accommodates, bathrooms, bedrooms, beds, latitude, and longitude.
+   - **Weak Correlations**: Availability_365, maximum_nights, minimum_nights.
+
+2. **Point-Biserial Correlation (Boolean Variables)**:
+   - **Strong Positive Correlations**: TV, air conditioning, cable TV, family/kid friendly, elevator, gym, doorman.
+   - **Strong Negative Correlations**: Lock on the bedroom door, free parking on premises, allow smoking, cats, pets on the property.
+
+3. **Kruskal-Wallis Test (Categorical Variables)**:
+   - Significant differences observed across all categorical variables.
+
+---
+
+### Model Performance
+| Model                               | MAE   | MSE   | R²    | Ranking |
+|-------------------------------------|-------|-------|-------|---------|
+| Multiple Linear Regression          | 0.273 | 0.138 | 0.681 | 4       |
+| Decision Tree Regression            | 0.301 | 0.164 | 0.620 | 7       |
+| Random Forest Regression            | 0.251 | 0.121 | 0.719 | 2       |
+| Support Vector Regression           | 0.357 | 0.216 | 0.497 | 8       |
+| Gradient Boosting Machine Regression| 0.258 | 0.123 | 0.714 | 3       |
+| XGBoost Regression                  | 0.286 | 0.149 | 0.655 | 6       |
+| Voting Regression Model             | 0.253 | 0.120 | 0.722 | 1       |
+| Neural Network Model                | 0.270 | 0.141 | 0.673 | 5       |
+
+- **Best Model**:  
+  The Voting Regressor Model achieved the best overall performance with the lowest MAE (0.253), lowest MSE (0.120), and highest R² (0.722), indicating excellent accuracy and minimal error.  
+
+- **Worst Model**:  
+  The Support Vector Regression model performed the worst, with the highest MAE (0.357), highest MSE (0.216), and lowest R² (0.497), showing difficulty in capturing relationships effectively.
+
 
 
